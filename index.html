@@ -1,0 +1,231 @@
+﻿<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{{BUSINESS_NAME}} — Speisekarte</title>
+    <meta name="description"
+        content="{{BUSINESS_NAME}} — {{SHORT_TAGLINE}}. {{STREET}}, {{ZIP}} {{CITY}}.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Background video — replace with a client-licensed clip, or delete this <video> block
+         and set `background: var(--bg);` on body in style.css for a plain background -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="https://v.ftcdn.net/17/75/54/13/240_F_1775541339_QW1T6mVMbCczrBq4QOitpkkQVXHovS72_ST.mp4"
+            type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <button class="btn btn-outline allergy-btn" type="button">
+        <span>⚠️ Allergie-Hinweis</span>
+    </button>
+
+    <header>
+        <div class="badge">{{BADGE_TEXT — e.g. Handmade • Premium • Kaiserslautern}}</div>
+        <h1>{{BUSINESS_NAME}}</h1>
+        <p>{{HERO_INTRO_TEXT — one or two sentences welcoming visitors and naming a few signature products}}</p>
+        <div class="primary-actions">
+            <button class="btn" type="button" data-scroll="#menu"><span>Zur Speisekarte</span></button>
+            <button class="btn btn-outline" type="button" data-scroll="#impressum"><span>Impressum &amp;
+                    Datenschutz</span></button>
+        </div>
+    </header>
+
+    <main class="container" id="menu">
+        <h2 class="section-title">Unsere Speisekarte</h2>
+        <p style="text-align:center;color:#e6dcc8;margin-bottom:18px;font-size:.9rem;">
+            {{MENU_INTRO_TEXT}}
+        </p>
+
+        <!-- Category nav: one button per menu-group section below.
+             data-scroll must match the target section's id. -->
+        <div class="category-nav">
+            <button type="button" class="active" data-scroll="#grp-category-1">{{CATEGORY 1 NAME}}</button>
+            <button type="button" data-scroll="#grp-category-2">{{CATEGORY 2 NAME}}</button>
+            <!-- Duplicate this <button> line for each additional category -->
+        </div>
+
+        <!-- =========================================================
+             MENU CATEGORY BLOCK (copy this whole <section> to add
+             another category — change the id, image, title and items)
+             ========================================================= -->
+        <section class="menu-group" id="grp-category-1">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?w=700&auto=format&fit=crop&q=60"
+                    alt="{{CATEGORY 1 NAME}}" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>{{CATEGORY 1 NAME}}</h2>
+                    <p>{{CATEGORY 1 SHORT DESCRIPTION}}</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Item name}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Short item description}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Item name}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Short item description}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Item name}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Short item description}}</p>
+                    </article>
+                    <!-- Duplicate this <article> block for each menu item -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-2">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?q=80&w=2064&auto=format&fit=crop"
+                    alt="{{CATEGORY 2 NAME}}" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>{{CATEGORY 2 NAME}}</h2>
+                    <p>{{CATEGORY 2 SHORT DESCRIPTION}}</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Item name}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Short item description}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Item name}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Short item description}}</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- ========================================================= -->
+
+        <!-- Contact / social / map block — optional, wired to CSS
+             classes that already exist in style.css -->
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Öffnungszeiten</h3>
+                <p>{{OPENING_HOURS}}</p>
+            </div>
+            <div class="info-card">
+                <h3>Kontakt</h3>
+                <p>{{PHONE}}<br>{{EMAIL}}</p>
+                <div class="social-links">
+                    <a href="{{INSTAGRAM_URL}}" target="_blank" rel="noopener">Instagram</a>
+                    <a href="{{FACEBOOK_URL}}" target="_blank" rel="noopener">Facebook</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-wrap">
+            <!-- Replace the src with an embed URL for the client's real address -->
+            <iframe class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=REPLACE_WITH_CLIENT_MAP_EMBED"></iframe>
+        </div>
+
+        <section id="impressum" style="
+  max-width:1100px;margin:40px auto;padding:32px;
+  background:rgba(10,10,15,0.9);border-radius:22px;
+  border:1px solid rgba(255,255,255,0.12);
+  box-shadow:0 18px 40px rgba(0,0,0,0.85);
+">
+            <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);margin-bottom:14px;">
+                Impressum
+            </h2>
+            <p style="color:#e6dcc8;line-height:1.7;">
+                <strong>{{BUSINESS_LEGAL_NAME}}</strong><br>
+                {{STREET}}<br>
+                {{ZIP}} {{CITY}}<br>
+                {{COUNTRY}}<br><br>
+                Verantwortlich für den Inhalt: <strong>{{RESPONSIBLE_PERSON_OR_BUSINESS_NAME}}</strong><br>
+                {{OPTIONAL: USt-IdNr., Handelsregister, Vertretungsberechtigte Person, etc.}}
+            </p>
+        </section>
+
+        <section id="datenschutz" style="
+  max-width:1100px;margin:40px auto 60px;padding:32px;
+  background:rgba(10,10,15,0.9);border-radius:22px;
+  border:1px solid rgba(255,255,255,0.12);
+  box-shadow:0 18px 40px rgba(0,0,0,0.85);
+">
+            <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);margin-bottom:14px;">
+                Datenschutz
+            </h2>
+            <p style="color:#e6dcc8;line-height:1.7;margin-bottom:10px;">
+                Wir verarbeiten personenbezogene Daten ausschließlich zur Bereitstellung unseres Angebots
+                und zur Verbesserung unserer Dienstleistungen.
+            </p>
+            <p style="color:#e6dcc8;line-height:1.7;margin-bottom:10px;">
+                Beim Besuch unserer Website werden technische Daten wie Browsertyp, Uhrzeit und Gerät
+                automatisch erfasst. Diese Daten sind anonym und dienen nur statistischen Zwecken.
+            </p>
+            <p style="color:#e6dcc8;line-height:1.7;">
+                Cookies werden nur für grundlegende Funktionen und einfache Statistiken verwendet.
+                Es findet keine Weitergabe an Dritte statt.
+            </p>
+            <!-- Note: a real Datenschutzerklärung for a business handling customer data,
+                 bookings, newsletters, analytics, etc. typically needs to be more detailed
+                 than this placeholder — have each client's actual text reviewed. -->
+        </section>
+
+        <footer>
+            &copy; <span id="year"></span> {{BUSINESS_NAME}}. Alle Rechte vorbehalten.
+        </footer>
+    </main>
+
+    <!-- Allergy / dietary-info modal -->
+    <div id="allergyModal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="allergyTitle">
+            <button class="close" type="button" aria-label="Schließen">×</button>
+            <h3 id="allergyTitle">⚠️ Wichtiger Hinweis zu Allergenen</h3>
+            <p>Bitte lies diesen Hinweis aufmerksam, bevor du bestellst:</p>
+            <ul>
+                <li>Unsere Produkte können <strong>Nüsse, Erdnüsse, Milch, Gluten, Soja, Eier</strong> und andere
+                    Allergene enthalten.</li>
+                <li>Auch bei sorgfältiger Zubereitung können <strong>Spuren von Allergenen</strong> nicht
+                    vollständig ausgeschlossen werden.</li>
+                <li>Wenn du eine Allergie oder Unverträglichkeit hast, sprich uns bitte <strong>vor der
+                        Bestellung</strong> direkt an.</li>
+            </ul>
+            <p>Unser Team hilft dir gerne, eine passende Auswahl zu finden.</p>
+            <button class="btn" type="button" id="allergyUnderstand">
+                <span>Ich habe den Hinweis verstanden</span>
+            </button>
+            <button class="btn btn-outline" type="button" id="allergyAsk">
+                <span>Ich habe Fragen – ich spreche das Team an</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Cookie consent banner -->
+    <div id="cookieBanner" class="cookie-banner" style="display:none;">
+        <p>Wir verwenden Cookies, um die Website technisch bereitzustellen und einfache Statistiken zu erstellen.
+            Du kannst zustimmen oder ablehnen.</p>
+        <div class="cookie-actions">
+            <button class="btn" id="acceptCookies" type="button"><span>Akzeptieren</span></button>
+            <button class="btn btn-outline" id="declineCookies" type="button"><span>Ablehnen</span></button>
+        </div>
+    </div>
+
+    <script>
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
