@@ -1,12 +1,12 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="de">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>{{BUSINESS_NAME}} — Speisekarte</title>
+    <title>AHMAD CAFFEE — Speisekarte</title>
     <meta name="description"
-        content="{{BUSINESS_NAME}} — {{SHORT_TAGLINE}}. {{STREET}}, {{ZIP}} {{CITY}}.">
+        content="AHMAD CAFFEE — {{SHORT_TAGLINE}}. {{STREET}}, {{ZIP}} {{CITY}}.">
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
@@ -28,9 +28,9 @@
     </button>
 
     <header>
-        <div class="badge">{{BADGE_TEXT — e.g. Handmade • Premium • Kaiserslautern}}</div>
-        <h1>{{BUSINESS_NAME}}</h1>
-        <p>{{HERO_INTRO_TEXT — one or two sentences welcoming visitors and naming a few signature products}}</p>
+        <div class="badge">{{BADGE_TEXT — e.g. Handmade • Premium • Deine Stadt}}</div>
+        <h1>AHMAD CAFFEE</h1>
+        <p>{{HERO_INTRO_TEXT — ein bis zwei Sätze, die Besucher willkommen heißen und ein paar Signature-Produkte nennen}}</p>
         <div class="primary-actions">
             <button class="btn" type="button" data-scroll="#menu"><span>Zur Speisekarte</span></button>
             <button class="btn btn-outline" type="button" data-scroll="#impressum"><span>Impressum &amp;
@@ -47,23 +47,34 @@
         <!-- Category nav: one button per menu-group section below.
              data-scroll must match the target section's id. -->
         <div class="category-nav">
-            <button type="button" class="active" data-scroll="#grp-category-1">{{CATEGORY 1 NAME}}</button>
-            <button type="button" data-scroll="#grp-category-2">{{CATEGORY 2 NAME}}</button>
-            <!-- Duplicate this <button> line for each additional category -->
+            <button type="button" class="active" data-scroll="#grp-category-1">Fruchtbecher</button>
+            <button type="button" data-scroll="#grp-category-2">Eis</button>
+            <button type="button" data-scroll="#grp-category-3">Eisrollen</button>
+            <button type="button" data-scroll="#grp-category-4">Eisbecher</button>
+            <button type="button" data-scroll="#grp-category-5">Milkshakes</button>
+            <button type="button" data-scroll="#grp-category-6">Frappés &amp; Eiskaffee</button>
+            <button type="button" data-scroll="#grp-category-7">Café &amp; Kaffee</button>
+            <button type="button" data-scroll="#grp-category-8">Tee</button>
+            <button type="button" data-scroll="#grp-category-9">Crêpes</button>
+            <button type="button" data-scroll="#grp-category-10">Kuchen &amp; Süßigkeiten</button>
+            <button type="button" data-scroll="#grp-category-11">Drinks</button>
+            <button type="button" data-scroll="#grp-category-12">Säfte</button>
+            <button type="button" data-scroll="#grp-category-13">Bubble Waffeln Becher</button>
         </div>
 
         <!-- =========================================================
-             MENU CATEGORY BLOCK (copy this whole <section> to add
-             another category — change the id, image, title and items)
+             MENU CATEGORY BLOCKS — one <section> per category.
+             Duplicate a whole <section> to add another category,
+             give it a new id, and add a matching button above.
              ========================================================= -->
         <section class="menu-group" id="grp-category-1">
             <div class="menu-header">
                 <img class="header-media" src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?w=700&auto=format&fit=crop&q=60"
-                    alt="{{CATEGORY 1 NAME}}" loading="lazy">
+                    alt="Fruchtbecher" loading="lazy">
                 <div class="media-overlay"></div>
                 <div class="menu-title">
-                    <h2>{{CATEGORY 1 NAME}}</h2>
-                    <p>{{CATEGORY 1 SHORT DESCRIPTION}}</p>
+                    <h2>Fruchtbecher</h2>
+                    <p>Frisch, fruchtig & perfekt für den Sommer.</p>
                 </div>
                 <div class="toggle-icon">+</div>
             </div>
@@ -71,18 +82,14 @@
             <div class="menu-content">
                 <div class="menu-items">
                     <article class="menu-item product">
-                        <div class="item-top"><span>{{Item name}}</span><span class="item-price">0,00 €</span></div>
-                        <p class="item-desc">{{Short item description}}</p>
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
                     </article>
                     <article class="menu-item product">
-                        <div class="item-top"><span>{{Item name}}</span><span class="item-price">0,00 €</span></div>
-                        <p class="item-desc">{{Short item description}}</p>
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
                     </article>
-                    <article class="menu-item product">
-                        <div class="item-top"><span>{{Item name}}</span><span class="item-price">0,00 €</span></div>
-                        <p class="item-desc">{{Short item description}}</p>
-                    </article>
-                    <!-- Duplicate this <article> block for each menu item -->
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
                 </div>
             </div>
         </section>
@@ -90,11 +97,11 @@
         <section class="menu-group" id="grp-category-2">
             <div class="menu-header">
                 <img class="header-media" src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?q=80&w=2064&auto=format&fit=crop"
-                    alt="{{CATEGORY 2 NAME}}" loading="lazy">
+                    alt="Eis" loading="lazy">
                 <div class="media-overlay"></div>
                 <div class="menu-title">
-                    <h2>{{CATEGORY 2 NAME}}</h2>
-                    <p>{{CATEGORY 2 SHORT DESCRIPTION}}</p>
+                    <h2>Eis</h2>
+                    <p>Slush & Soft-Eis, verschiedene Sorten.</p>
                 </div>
                 <div class="toggle-icon">+</div>
             </div>
@@ -102,13 +109,311 @@
             <div class="menu-content">
                 <div class="menu-items">
                     <article class="menu-item product">
-                        <div class="item-top"><span>{{Item name}}</span><span class="item-price">0,00 €</span></div>
-                        <p class="item-desc">{{Short item description}}</p>
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
                     </article>
                     <article class="menu-item product">
-                        <div class="item-top"><span>{{Item name}}</span><span class="item-price">0,00 €</span></div>
-                        <p class="item-desc">{{Short item description}}</p>
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
                     </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-3">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?w=700&auto=format&fit=crop&q=60"
+                    alt="Eisrollen" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>Eisrollen</h2>
+                    <p>Frisch gerollt auf der Eisplatte.</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-4">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?q=80&w=2064&auto=format&fit=crop"
+                    alt="Eisbecher" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>Eisbecher</h2>
+                    <p>Große Becher mit Toppings.</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-5">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?w=700&auto=format&fit=crop&q=60"
+                    alt="Milkshakes" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>Milkshakes</h2>
+                    <p>Cremig, kalt und voll Geschmack.</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-6">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?q=80&w=2064&auto=format&fit=crop"
+                    alt="Frappés &amp; Eiskaffee" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>Frappés &amp; Eiskaffee</h2>
+                    <p>Kaffee, Eis und Karamell.</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-7">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?w=700&auto=format&fit=crop&q=60"
+                    alt="Café &amp; Kaffee" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>Café &amp; Kaffee</h2>
+                    <p>Heiß, aromatisch, frisch zubereitet.</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-8">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?q=80&w=2064&auto=format&fit=crop"
+                    alt="Tee" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>Tee</h2>
+                    <p>Heiß, verschiedene Sorten.</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-9">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?w=700&auto=format&fit=crop&q=60"
+                    alt="Crêpes" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>Crêpes</h2>
+                    <p>Frisch gebacken, süß belegt.</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-10">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?q=80&w=2064&auto=format&fit=crop"
+                    alt="Kuchen &amp; Süßigkeiten" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>Kuchen &amp; Süßigkeiten</h2>
+                    <p>Täglich frisch, wechselnde Sorten.</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-11">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?w=700&auto=format&fit=crop&q=60"
+                    alt="Drinks" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>Drinks</h2>
+                    <p>Klassische Erfrischungsgetränke.</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-12">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?q=80&w=2064&auto=format&fit=crop"
+                    alt="Säfte" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>Säfte</h2>
+                    <p>Frisch gepresst.</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-group" id="grp-category-13">
+            <div class="menu-header">
+                <img class="header-media" src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?w=700&auto=format&fit=crop&q=60"
+                    alt="Bubble Waffeln Becher" loading="lazy">
+                <div class="media-overlay"></div>
+                <div class="menu-title">
+                    <h2>Bubble Waffeln Becher</h2>
+                    <p>Frisch gebacken.</p>
+                </div>
+                <div class="toggle-icon">+</div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items">
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <article class="menu-item product">
+                        <div class="item-top"><span>{{Produktname}}</span><span class="item-price">0,00 €</span></div>
+                        <p class="item-desc">{{Kurze Produktbeschreibung}}</p>
+                    </article>
+                    <!-- Weitere Artikel: dieses <article>-Element duplizieren -->
                 </div>
             </div>
         </section>
@@ -132,9 +437,9 @@
         </div>
 
         <div class="map-wrap">
-            <!-- Replace the src with an embed URL for the client's real address -->
+            <!-- Replace the src with an embed URL for your real address -->
             <iframe class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=REPLACE_WITH_CLIENT_MAP_EMBED"></iframe>
+                src="https://www.google.com/maps/embed?pb=REPLACE_WITH_YOUR_MAP_EMBED"></iframe>
         </div>
 
         <section id="impressum" style="
@@ -147,7 +452,7 @@
                 Impressum
             </h2>
             <p style="color:#e6dcc8;line-height:1.7;">
-                <strong>{{BUSINESS_LEGAL_NAME}}</strong><br>
+                <strong>AHMAD CAFFEE</strong><br>
                 {{STREET}}<br>
                 {{ZIP}} {{CITY}}<br>
                 {{COUNTRY}}<br><br>
@@ -177,13 +482,13 @@
                 Cookies werden nur für grundlegende Funktionen und einfache Statistiken verwendet.
                 Es findet keine Weitergabe an Dritte statt.
             </p>
-            <!-- Note: a real Datenschutzerklärung for a business handling customer data,
-                 bookings, newsletters, analytics, etc. typically needs to be more detailed
-                 than this placeholder — have each client's actual text reviewed. -->
+            <!-- Hinweis: Eine echte Datenschutzerklärung für ein Unternehmen, das Kundendaten,
+                 Buchungen, Newsletter, Analytics usw. verarbeitet, muss in der Regel ausführlicher
+                 sein als dieser Platzhaltertext — bitte rechtlich prüfen lassen. -->
         </section>
 
         <footer>
-            &copy; <span id="year"></span> {{BUSINESS_NAME}}. Alle Rechte vorbehalten.
+            &copy; <span id="year"></span> AHMAD CAFFEE. Alle Rechte vorbehalten.
         </footer>
     </main>
 
